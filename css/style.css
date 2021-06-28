@@ -14,6 +14,10 @@ html, body {
   overflow-x: hidden;
 }
 
+html.nav-open {
+  overflow-y: hidden;
+}
+
 .logged-in {
   display: none;
 }
@@ -298,18 +302,54 @@ h5 {
 }
 
 .top-bar .nav-items .item a {
-  margin-right: 2rem;
+  margin-left: 2rem;
   color: var(--dark-text);
   text-decoration: none;
 }
 
+.top-bar .top-items {
+  font-size: 16px;
+}
+
+@media (max-width: 991px) {
+  .top-bar .top-items {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 500px) {
-  .top-bar .top-items .nav-items {
-    display: none;
+  .top-bar .top-items {
+    font-size: 14px;
   }
   .top-bar .top-items span {
     font-size: 12px;
   }
+  .top-bar .top-items .nav-items {
+    display: none;
+    position: absolute;
+    bottom: -306px;
+    left: 0;
+    background: #eee;
+    height: 100%;
+    flex-direction: column;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 15px;
+    font-size: 14px;
+  }
+  .top-bar .top-items .nav-items.show {
+    display: flex;
+  }
+  .top-bar .top-items .nav-items .item {
+    padding: .5rem 0;
+  }
+  .top-bar .nav-items .item a {
+    margin-left: 0;
+  }
+}
+
+.collapsing{
+  transition: height 0s ease
 }
 
 /* Navbar */
@@ -322,28 +362,21 @@ h5 {
   max-height: 55px;
 }
 
-@media (max-width: 500px) {
-  .navbar {
-    padding: .75rem 0;
-  }
-  .navbar .navbar-brand img {
-    max-height: 40px;
-  }
-}
-
 .navbar .nav-link {
   color: var(--blue);
   font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
   margin-left: 3rem;
+  display: flex;
+  align-items: center;
 }
 
 .navbar .nav-link.has-sub-nav:after {
   content: url('../img/chevron-down.svg');
   margin-left: 5px;
   position: relative;
-  top: -1px;
+  top: 0;
 }
 
 .navbar .nav-link.has-sub-nav.active:after {
@@ -357,6 +390,7 @@ h5 {
 
 .navbar form {
   position: relative;
+  display: flex;
 }
 
 .navbar form .search-btn {
@@ -372,6 +406,107 @@ h5 {
 
 .navbar form .search-btn i {
   font-size: 14px;
+}
+
+.mobile-action,
+.mobile-buttons {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    padding: .75rem;
+  }
+  .navbar .navbar-brand img {
+    max-height: 40px;
+    max-height: 47px;
+  }
+  .navbar .nav-link {
+    margin-left: 1rem;
+    font-size: 12px;
+  }
+  .navbar .account {
+    display: none;
+  }
+  .navbar .mobile-buttons img:first-child {
+    margin-right: 1rem;
+  }
+  .navbar-toggler:focus {
+    padding: 0;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .mobile-close {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
+  .navbar form {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-collapse.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 999;
+  }
+  .navbar-nav {
+    order: 2;
+    background: #fff;
+    margin-right: 0 !important;
+    width: 100%;
+    padding: 15px;
+  }
+  .navbar form {
+    display: flex;
+    order: 1;
+    width: 100%;
+    background: #fff;
+    padding: 0 15px;
+  }
+  .navbar .mobile-buttons {
+    display: none;
+  }
+  .navbar .nav-link {
+    margin-left: 0;
+    justify-content: space-between;
+  }
+  .mobile-action {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px 15px 15px;
+  } 
+  .navbar .nav-link.has-sub-nav:after,
+  .navbar .nav-link.active.has-sub-nav:after {
+    content: '→';
+    margin-left: 5px;
+    position: relative;
+    top: 0;
+  }
+  .navbar-toggler {
+    padding: 0;
+  }
+  .navbar form .search-btn {
+    right: 15px;
+    top: -0.5px;
+  }
+  .navbar .nav-link {
+    font-size: 14px;
+  }
+  .mobile-buttons {
+    display: flex;
+  }
 }
 
 /* Sub navigation */

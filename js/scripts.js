@@ -147,3 +147,31 @@ function setSlider(width) {
     circleSlider.classList.remove('destroyed');
   }
 }
+
+// Listen to all click events on the document
+document.addEventListener('click', function (event) {
+
+	// If the clicked element does not have and is not contained by an element with the .click-me class, ignore it
+	if (!event.target.closest('.navbar-toggler')) return;
+
+	// Otherwise, do something...
+  const topItems = document.querySelector('.top-bar .top-items .nav-items');
+  const html = document.querySelector('html');
+  topItems.classList.add('show');
+  html.classList.add('nav-open');
+
+});
+
+// Listen to all click events on the document
+document.addEventListener('click', function (event) {
+
+	// If the clicked element does not have and is not contained by an element with the .click-me class, ignore it
+	if (!event.target.closest('.mobile-close')) return;
+
+	// Otherwise, do something...
+  const topItems = document.querySelector('.top-bar .top-items .nav-items');
+  const html = document.querySelector('html');
+  topItems.classList.remove('show');
+  html.classList.remove('nav-open');
+
+});
