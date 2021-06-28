@@ -57,6 +57,10 @@ function setSlider(width) {
     slidesPerView: 1.5,
     centeredSlides: true,
     spaceBetween: 0,
+
+    hashNavigation: {
+        watchState: true,
+    },
   
     // If we need pagination
     pagination: {
@@ -77,6 +81,10 @@ function setSlider(width) {
     centeredSlides: true,
     spaceBetween: 20,
     loop: false,
+
+    hashNavigation: {
+        watchState: true,
+    },
   
     // If we need pagination
     pagination: {
@@ -95,8 +103,13 @@ function setSlider(width) {
     // Optional parameters
     slidesPerView: 1.5,
     centeredSlides: true,
-    spaceBetween: 0,
-    loop: true,
+    spaceBetween: 30,
+    loop: false,
+    initialSlide: 1,
+    
+    hashNavigation: {
+        watchState: true,
+    },
   
     // If we need pagination
     pagination: {
