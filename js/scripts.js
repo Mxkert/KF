@@ -4,21 +4,24 @@ document.addEventListener('click', function (event) {
 	// If the clicked element does not have the .has-sub-nav class, ignore it
 	if (!event.target.matches('.has-sub-nav')) return;
 
-  // Get the sub-nav element corresponding to the clicked navigation item
-  const parent = event.target.parentNode;
-  const subNav = parent.querySelector('.sub-nav');
-
-  if (subNav.classList.contains('shown')) {
-    // Corresponding sub-nav element is already active
-    subNav.classList.remove('shown')
-  } else {
-    // Remove the 'shown' class from all sub-nav elements
-    const subNavs = document.querySelectorAll('.sub-nav')
-    subNavs.forEach(element => element.classList.remove('shown'))
+  if (window.innerWidth > 990) {
+    // Get the sub-nav element corresponding to the clicked navigation item
+    const parent = event.target.parentNode;
+    const subNav = parent.querySelector('.sub-nav');
   
-    // Add the 'shown' class to the sub-nav element
-    subNav.classList.add('shown')
+    if (subNav.classList.contains('shown')) {
+      // Corresponding sub-nav element is already active
+      subNav.classList.remove('shown')
+    } else {
+      // Remove the 'shown' class from all sub-nav elements
+      const subNavs = document.querySelectorAll('.sub-nav')
+      subNavs.forEach(element => element.classList.remove('shown'))
+    
+      // Add the 'shown' class to the sub-nav element
+      subNav.classList.add('shown')
+    }
   }
+
 });
 
 // Close sub navigation
