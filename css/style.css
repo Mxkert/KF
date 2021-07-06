@@ -872,7 +872,7 @@ h6 {
   margin-right: 2.5px;
 }
 
-.usp-container .usp-item.green-item {
+.usp-container .usp-item.green-slide {
   color: var(--green);
 }
 
@@ -1663,6 +1663,10 @@ footer .badges .badge-icon img {
 .modal.cta-modal .modal-header {
   border-bottom: none;
   margin-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .modal.cta-modal .modal-body {
