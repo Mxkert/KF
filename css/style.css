@@ -1649,6 +1649,10 @@ footer .badges .badge-icon img {
 }
 
 /* Vraag 't Piggy */
+.modal.cta-modal {
+  background: var(--green);
+}
+
 .modal.cta-modal .modal-header .btn-close {
   background: none;
   width: auto;
@@ -1697,6 +1701,10 @@ footer .badges .badge-icon img {
 .modal.cta-modal .modal-form .form-control::-ms-input-placeholder { /* Microsoft Edge */
   color: var(--white);
   opacity: 0.5;
+}
+
+.modal-fullscreen .modal-body {
+  overflow-y: visible;
 }
 
 .form-control:focus,
