@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Meta -->
+    <title>Kernfarm</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Navigation bar -->
+    <nav class="top-bar">
+      <div class="container-fluid">
+        <div class="top-items">
+          <span>
+            <img src="../img/megaphone.svg">
+            ALARMNUMMER:  +31 (0)6 3222 0087
+          </span>
+          <div class="nav-items">
+            <div class="item">
+              <a href="#">Over</a>
+            </div>
+            <div class="item">
+              <a href="#">Team</a>
+            </div>
+            <div class="item">
+              <a href="#">Agenda</a>
+            </div>
+            <div class="item">
+              <a href="#">Actueel</a>
+            </div>
+            <div class="item">
+              <a href="#">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/img/kernfarm-logo.svg" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="../img/navbar-toggler.svg" />
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="mobile-action">
+            <h6 class="text-uppercase">Menu</h6>
+            <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <img src="../img/close.svg" />
+            </button>
+          </div>
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link has-sub-nav active" href="#">Dieren</a>
+              <!-- Category navigation -->
+              <div class="category-nav">
+                <div class="nav-item">
+                  <div class="nav-link parent-link">
+                    Dieren:
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-link has-sub-nav">
+                    <a href="#">
+                      Rundvee
+                    </a>
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-link has-sub-nav">
+                    <a href="#">
+                      Varkens
+                    </a>
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-link has-sub-nav">
+                    <a href="#">
+                      Pluimvee
+                    </a>
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-link has-sub-nav">
+                    <a href="#">
+                      Kleine herkauwers
+                    </a>
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-link has-sub-nav">
+                    <a href="#">
+                      Paarden
+                    </a>
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-link has-sub-nav">
+                    <a href="#">
+                      Gezelschapsdieren
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Sub navigation -->
+              <div class="sub-nav">
+                <div class="bodyClick"></div>
+                <div class="container">
+                  <div class="row sub-nav-heading">
+                    <div class="col-md-12">
+                      <h3 class="title">
+                        Samenwerken aan de gezondheid voor deze doeldieren:
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="row">
+        
+                    <div class="col-md-2">
+                      <div class="nav-item">
+                        <div class="nav-link parent-link">
+                          <span class="category-name">Dieren / </span>Rundvee<span class="category-dots">:</span>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Melkvee
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Vleesvee
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Jongvee
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-2">
+                      <div class="nav-item">
+                        <div class="nav-link parent-link">
+                          <span class="category-name">Dieren / </span>Varkens<span class="category-dots">:</span>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Zeugen
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Biggen
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Vleesvarkens
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-2">
+                      <div class="nav-item">
+                        <div class="nav-link parent-link">
+                          <span class="category-name">Dieren / </span>Pluimvee<span class="category-dots">:</span>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Vleeskuiken
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Legkip
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Fok/ouderdier
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Kalkoen
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+        
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Producten</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hulplijn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Innovatie</a>
+            </li>
+          </ul>
+          <form> 
+            <input class="form-control" type="search" placeholder="Zoeken naar..." aria-label="Zoeken">
+            <button class="search-btn" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+          <div class="account">
+
+            <!-- Wanneer niet ingelogd -->
+            <div class="logged-out">
+              <a class="nav-link has-sub-nav" href="#">Inloggen / registreren</a>
+              <!-- Sub navigation -->
+              <div class="sub-nav">
+                <div class="bodyClick"></div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h3 class="title">
+                        Je persoonlijke omgeving
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="row">
+        
+                    <div class="col-md-2">
+                      <div class="nav-item">
+                        <div class="nav-link parent-link">
+                          Dashboard
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Bestellingen
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Facturen
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Mijn gegevens
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Uitloggen
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+        
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wanneer wel ingelogd -->
+            <div class="logged-in">
+              <a class="nav-link has-sub-nav" href="#">Account</a>
+            </div>
+
+          </div>
+          <div class="mobile-buttons">
+            <img src="../img/search.svg" />
+            <img src="../img/user.svg" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-header subpage-header">
+      <div class="container">
+        <div class="row align-items-center h-100">
+          <div class="col-lg-12">
+            <div class="content">
+              <div class="breadcrumbs">
+                <h6>Home</h6>
+                <h6>Dieren</h6>
+              </div>
+              <h1 class="title mb-4 white-title">Samen met uw boer aan sterke zeugen werken</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel nisl risus. Sed lobortis eget ligula vitae ornare. Nulla eget posuere risus, eu auctor dui. Duis a vulputate ligula. Praesent nec luctus odio. Vivamus iaculis lorem mauris, non fringilla justo tincidunt nec. Maecenas dapibus condimentum arcu.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="header-notification">
+          <div class="content">
+            <span><strong>ACTUEEL:</strong> Blauwtong, lees onze bevindingen tot nu toe via <strong>MIJN KERNFARM</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+
+      <div class="section">
+        <div class="container">
+          <div class="row section-heading">
+            <div class="col-md-12">
+              <h4>Producten voor zeugen</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="product-listing">
+              <!-- Product item -->
+              <div class="product-container">
+                <div class="product-image">
+                  <img src="../img/products/product.png" alt="" class="w-100" />
+                </div>
+                <div class="product-desc">
+                  <h5>Fixr 1</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  </p>
+                  <a href="#" class="btn btn-link">Meer info</a>
+                </div>
+              </div>
+              <!-- Product item -->
+              <div class="product-container">
+                <div class="product-image">
+                  <img src="../img/products/product.png" alt="" class="w-100" />
+                </div>
+                <div class="product-desc">
+                  <h5>Fixr 1</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  </p>
+                  <a href="#" class="btn btn-link">Meer info</a>
+                </div>
+              </div>
+              <!-- Product item -->
+              <div class="product-container">
+                <div class="product-image">
+                  <img src="../img/products/product.png" alt="" class="w-100" />
+                </div>
+                <div class="product-desc">
+                  <h5>Fixr 1</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  </p>
+                  <a href="#" class="btn btn-link">Meer info</a>
+                </div>
+              </div>
+              <!-- Product item -->
+              <div class="product-container">
+                <div class="product-image">
+                  <img src="../img/products/product.png" alt="" class="w-100" />
+                </div>
+                <div class="product-desc">
+                  <h5>Fixr 1</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  </p>
+                  <a href="#" class="btn btn-link">Meer info</a>
+                </div>
+              </div>
+              <!-- Product item -->
+              <div class="product-container">
+                <div class="product-image">
+                  <img src="../img/products/product.png" alt="" class="w-100" />
+                </div>
+                <div class="product-desc">
+                  <h5>Fixr 1</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  </p>
+                  <a href="#" class="btn btn-link">Meer info</a>
+                </div>
+              </div>
+              <!-- Product item -->
+              <div class="product-container">
+                <div class="product-image">
+                  <img src="../img/products/product.png" alt="" class="w-100" />
+                </div>
+                <div class="product-desc">
+                  <h5>Fixr 1</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  </p>
+                  <a href="#" class="btn btn-link">Meer info</a>
+                </div>
+              </div>
+              <!-- Product item -->
+              <div class="product-container">
+                <div class="product-image">
+                  <img src="../img/products/product.png" alt="" class="w-100" />
+                </div>
+                <div class="product-desc">
+                  <h5>Fixr 1</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  </p>
+                  <a href="#" class="btn btn-link">Meer info</a>
+                </div>
+              </div>
+              <!-- Product item -->
+              <div class="product-container">
+                <div class="product-image">
+                  <img src="../img/products/product.png" alt="" class="w-100" />
+                </div>
+                <div class="product-desc">
+                  <h5>Fixr 1</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  </p>
+                  <a href="#" class="btn btn-link">Meer info</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12">
+              <div class="button d-flex justify-content-center">
+                <a href="#" class="btn btn-transparent">Alle producten</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="card contact-card">
+                <div class="card-body">
+                  <h3 class="title">Eva wordt heel blij van tevreden klanten</h3>
+                  <h6>Happy Customer Specialist</h6>
+                  <p>
+                    Helpt vaak bij het oplossen en preventie van mastitis, kreupelheden, diarree, luchtwegproblemen, locomotie- problemen, hersenvliesontsteking en direct een vraag!
+                  </p>
+                  <div class="buttons">
+                    <a href="#" class="btn btn-transparent me-4">App Eva</a>
+                    <a href="#" class="btn btn-link">Stuur een email</a>
+                  </div>
+                </div>
+                <div class="contact-image">
+                  <img src="../img/contact/eva.png" alt="Eva" class="w-100" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <img src="../img/card-corner.svg" class="corner">
+      <div class="container">
+        <div class="animated-btn hidden">
+          <img class="head" src="../img/animations/piggy-head.svg" />
+          <img class="feet" src="../img/animations/piggy-feet.svg" />
+          <a href="#" class="btn btn-green btn-animated">
+            <span>Vraag 't Piggy</span>
+          </a>
+        </div>
+        <div class="row">
+
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="mail-container">
+              <img src="../img/card-corner-white.svg" class="corner">
+              <h4 class="title white-title">Happy M@il</h4>
+              <p>
+                Direct onze laatste voorraad en nieuw aanbod in je mailbox!
+              </p>
+              <a href="#" class="btn btn-plain plain-white">
+                <span>Aanmelden</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-3 mx-auto mb-4 mb-md-0">
+            <h6>Contact</h6>
+            <p>
+              Kernfarm B.V.<br>
+              De Corridor 14D<br>
+              3621 ZB Breukelen<br>
+              The Netherlands<br>
+              <br>
+              <a href="mailto:info@kernfarm.com">info@kernfarm.com</a><br>
+              <br>
+              Kantoor: +31 (0) 346 785 139<br>
+              Buiten kantooruren: +31 (0) 6 3222 0087
+            </p>
+
+            <div class="socials">
+              <div class="social-icon">
+                <img src="../img/social-icons/linkedin.svg" /> 
+              </div>
+              <div class="social-icon">
+                <img src="../img/social-icons/twitter.svg" /> 
+              </div>
+              <div class="social-icon">
+                <img src="../img/social-icons/instagram.svg" />                               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="d-flex flex-column h-100">
+              <h6>Legal</h6>
+              <div class="nav-item">
+                <a href="#">
+                  Algemene voorwaarden
+                </a>
+              </div>
+              <div class="nav-item">
+                <a href="#">
+                  Privacy statement
+                </a>
+              </div>
+              <div class="nav-item">
+                <a href="#">
+                  Cookie statement
+                </a>
+              </div>
+              <div class="nav-item">
+                <a href="#">
+                  Disclaimer
+                </a>
+              </div>
+
+              <div class="copyright">
+                <p>Copyright 2021 - Kernfarm</p>
+              </div>
+
+              <div class="badges">
+                <div class="badge-icon">
+                  <img src="../img/badges/GMP-Logo-1.svg" />
+                </div>
+                <div class="badge-icon">
+                  <img src="../img/badges/Image 2.svg" />
+                </div>
+                <div class="badge-icon">
+                  <img src="../img/badges/Top-250-groeibedrijven-2020.svg" />
+                </div>
+                <div class="badge-icon">
+                  <img src="../img/badges/Laag 1.svg" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Bootstrap 5 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Swiper CDN -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="/js/scripts.js" async defer></script>
+  </body>
+</html>

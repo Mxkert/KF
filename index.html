@@ -26,7 +26,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300;400&display=swap" rel="stylesheet">
 
     <!-- Custom stylesheet -->
     <link rel="stylesheet" href="/css/style.css">
@@ -81,12 +82,287 @@
           </div>
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
+              <a class="nav-link d-md-none" href="#">Home</a>
               <a class="nav-link has-sub-nav active" href="#">Dieren</a>
+              <!-- Category navigation -->
+              <div class="category-nav">
+                <div class="mobile-action">
+                  <h6 class="text-uppercase back-btn"><i class="fa fa-arrow-left"></i> Terug naar menu</h6>
+                  <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="../img/close.svg" />
+                  </button>
+                </div>
+                <div class="navbar-nav">
+                  <div class="nav-item">
+                    <div class="nav-link parent-link">
+                      Dieren:
+                    </div>
+                  </div>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Rundvee
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Rundvee<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Varkens
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Varkens<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Pluimvee
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Pluimvee<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Kleine herkauwers
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Kleine herkauwers<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Paarden
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Paarden<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Gezelschapsdieren
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Gezelschapsdieren<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- Sub navigation -->
               <div class="sub-nav">
                 <div class="bodyClick"></div>
                 <div class="container">
-                  <div class="row">
+                  <div class="row sub-nav-heading">
                     <div class="col-md-12">
                       <h3 class="title">
                         Samenwerken aan de gezondheid voor deze doeldieren:
@@ -98,7 +374,7 @@
                     <div class="col-md-2">
                       <div class="nav-item">
                         <div class="nav-link parent-link">
-                          Rundvee
+                          <span class="category-name">Dieren / </span>Rundvee<span class="category-dots">:</span>
                         </div>
                       </div>
                       <div class="nav-item">
@@ -124,6 +400,71 @@
                       </div>
                     </div>
         
+                    <div class="col-md-2">
+                      <div class="nav-item">
+                        <div class="nav-link parent-link">
+                          <span class="category-name">Dieren / </span>Varkens<span class="category-dots">:</span>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Zeugen
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Biggen
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Vleesvarkens
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-2">
+                      <div class="nav-item">
+                        <div class="nav-link parent-link">
+                          <span class="category-name">Dieren / </span>Pluimvee<span class="category-dots">:</span>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Vleeskuiken
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Legkip
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Fok/ouderdier
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Kalkoen
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+        
                   </div>
                 </div>
               </div>
@@ -139,7 +480,7 @@
             </li>
           </ul>
           <form> 
-            <input class="form-control" type="search" placeholder="Zoeken naar..." aria-label="Zoeken">
+            <input class="form-control mb-0" type="search" placeholder="Zoeken naar..." aria-label="Zoeken">
             <button class="search-btn" type="submit">
               <i class="fa fa-search"></i>
             </button>
@@ -238,7 +579,7 @@
           <div class="animated-btn">
             <img class="head" src="../img/animations/piggy-head.svg" />
             <img class="feet" src="../img/animations/piggy-feet.svg" />
-            <a href="#" class="btn btn-white btn-animated">
+            <a href="#" class="btn btn-white btn-animated" data-bs-toggle="modal" data-bs-target="#piggyModal">
               <span>Vraag 't Piggy</span>
             </a>
           </div>
@@ -248,31 +589,59 @@
             <span><strong>ACTUEEL:</strong> Blauwtong, lees onze bevindingen tot nu toe via <strong>MIJN KERNFARM</strong></span>
           </div>
         </div>
-        <div class="usp-container">
-          <div class="usp-item">
-            <img src="../img/check.svg" />
-            Snelle leveringen
-          </div>
-          <div class="usp-item">
-            <img src="../img/check.svg" />
-            Snelle leveringen
-          </div>
-          <div class="usp-item">
-            <img src="../img/check.svg" />
-            Snelle leveringen
-          </div>
-          <div class="usp-item">
-            <img src="../img/check.svg" />
-            Snelle leveringen
-          </div>
-          <div class="usp-item">
-            Altijd een oplossing!
-          </div>
-        </div>
       </div>
     </div>
 
     <div class="main">
+
+      <div class="section usp-section py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="usp-container">
+
+                <!-- Slider main container -->
+                <div class="swiper-container usp-slider">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <div class="usp-item">
+                        <img src="../img/check.svg" />
+                        Snelle leveringen
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="usp-item">
+                        <img src="../img/check.svg" />
+                        Betrouwbare producten
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="usp-item">
+                        <img src="../img/check.svg" />
+                        Heldere prijzen
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="usp-item">
+                        <img src="../img/check.svg" />
+                        Persoonlijke service
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="usp-item green-slide">
+                        Altijd een oplossing!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                    
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="section slider-section">
         <div class="container">
@@ -375,13 +744,13 @@
       <div class="section">
         <div class="container">
           <div class="row">
-            <div class="col-lg-9 mr-auto">
+            <div class="col-lg-10 mr-auto">
               <h2 class="title">
                 Kernfarm is een revolutionaire groothandel in veterinaire geneesmiddelen
               </h2>
             </div>
           </div>
-          <div class="row mt-2">
+          <div class="row mt-2 mt-md-4">
             <div class="col-lg-4 col-md-6 me-auto">
               <p>
                 Wij werken samen met grote en kleine farma-, 
@@ -413,18 +782,18 @@
       <div class="section cta-section">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="col-lg-9 col-md-10 mx-auto">
               <div class="cta-container">
                 <div class="cta-image mb-4">
                   <img src="../img/farm-truck.svg" alt="">
                 </div>
                 <div class="cta-content text-center">
-                  <h2 class="title white-title">Op zoek naar een specifiek vaccin of medicijn?
+                  <h2 class="title white-title mb-0">Op zoek naar een specifiek vaccin of medicijn?
                   </h2>
                   <p class="text-white">
                     Wij zoeken graag mee, laat hier je zoekvraag achter!
                   </p>
-                  <a href="#" class="btn btn-white">
+                  <a href="#" class="btn btn-white mt-3">
                     <span>Hulplijn</span>
                   </a>
                 </div>
@@ -576,13 +945,94 @@
 
     </div>
 
+    <!-- Vraag 't Piggy - Fullscreen modal -->
+    <div class="modal cta-modal fade" id="piggyModal" tabindex="-1" aria-labelledby="piggyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 d-flex">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="../img/close-white.svg" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 mx-auto">
+                  <div class="modal-form">
+                    <h2 class="title text-white">Vraag het piggy!</h2>
+                    <p class="text-white">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel nisl risus. Sed lobortis eget ligula vitae ornare. Nulla eget posuere risus, eu auctor dui. Duis a vulputate ligula. Praesent nec luctus odio. 
+                    </p>
+
+                    <!-- Form -->
+                    <form action="#">
+                      <div class="row">
+                        <!-- Je vraag -->
+                        <div class="col-md-12">
+                          <div class="mb-2">
+                            <textarea class="form-control" id="vraag" name="vraag" rows="3" placeholder="Je vraag"></textarea>
+                          </div>
+                        </div>
+                        <!-- Je voornaam -->
+                        <div class="col-md-12">
+                          <div class="mb-2">
+                            <input type="text" class="form-control" id="voornaam" name="voornaam" placeholder="Je voornaam">
+                          </div>
+                        </div>
+                        <!-- Je e-mailadres -->
+                        <div class="col-md-12">
+                          <div class="mb-2">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Je e-mailadres">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <p class="text-start text-white mb-1">
+                            Als je liever terug gebeld wilt worden:
+                          </p>
+                          <!-- Je telefoonnummer -->
+                          <div class="col-md-12">
+                            <div class="mb-3">
+                              <input type="tel" class="form-control" id="telefoonnummer" name="telefoonnummer" placeholder="Je telefoonnummer">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-md-12">
+                          <div class="animated-btn">
+                            <img class="head" src="../img/animations/piggy-head.svg" />
+                            <img class="feet" src="../img/animations/piggy-feet.svg" />
+                            <button type="submit" class="btn btn-white btn-animated">
+                              <span>Vraag 't Piggy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <img src="../img/card-corner.svg" class="corner">
       <div class="container">
         <div class="animated-btn hidden">
           <img class="head" src="../img/animations/piggy-head.svg" />
           <img class="feet" src="../img/animations/piggy-feet.svg" />
-          <a href="#" class="btn btn-green btn-animated">
+          <a href="#" class="btn btn-green btn-animated" data-bs-toggle="modal" data-bs-target="#piggyModal">
             <span>Vraag 't Piggy</span>
           </a>
         </div>
@@ -676,6 +1126,7 @@
 
         </div>
       </div>
+
     </footer>
     
     <!-- Bootstrap 5 CDN -->
