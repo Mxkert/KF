@@ -88,11 +88,62 @@ document.addEventListener('click', function (event) {
 
 });
 
+// Open filters
+document.addEventListener('click', function (event) {
+
+	// If the clicked element does not have the .bodyClick class, ignore it
+	if (!event.target.matches('.open-filters')) return;
+
+  // Remove the 'shown' class from all sub-nav elements
+  document.querySelector('.search-container').classList.add('active');
+
+});
+
+// Close filters
+document.addEventListener('click', function (event) {
+
+	// If the clicked element does not have the .bodyClick class, ignore it
+	if (!event.target.matches('.close-filters')) return;
+  console.log('close filters');
+
+  // Remove the 'shown' class from all sub-nav elements
+  document.querySelector('.search-container').classList.remove('active');
+
+});
+
+// Reset filters
+document.addEventListener('click', function (event) {
+
+	// If the clicked element does not have the .bodyClick class, ignore it
+	if (!event.target.matches('.reset-filters')) return;
+
+});
+
+// Open letter box
+document.addEventListener('click', function (event) {
+
+	// If the clicked element does not have the .has-sub-nav class, ignore it
+	if (!event.target.matches('#show_dropdown')) return;
+
+  if (window.innerWidth > 501) {
+    // Get the sub-nav element corresponding to the clicked navigation item
+    const parent = event.target.parentNode;
+    const letterBox = parent.querySelector('.letter-box');
+
+    if (letterBox.classList.contains('active')) {
+      letterBox.classList.remove('active');
+    } else {
+      letterBox.classList.add('active');
+    }
+  }
+
+});
+
 // Sliders
 window.addEventListener("load", onLoadFunction);
 
-function onLoadFunction(e){
-  console.log('loaded');
+function onLoadFunction(e) {
+  
   //do the magic you want 
   onResizeFunction();// if you want to trigger resize function immediately, call it 
 
@@ -101,7 +152,6 @@ function onLoadFunction(e){
 
 function onResizeFunction (e) {
   var newWidth = window.innerWidth;
-  var newHeight = window.innerHeight; 
 
   setSlider(newWidth);
 }
@@ -213,30 +263,48 @@ function setSlider(width) {
   const uspSlider = document.querySelector('.usp-slider');
 
   if (width > 768) {
-    animalSwiper.destroy();
-    blogSwiper.destroy();
-    circleSwiper.destroy();
-    uspSwiper.destroy();
-
-    animalSlider.classList.add('destroyed');
-    blogSlider.classList.add('destroyed');
-    circleSlider.classList.add('destroyed');
-    uspSlider.classList.add('destroyed');
+    if (animalSlider) {
+      animalSwiper.destroy();
+      animalSlider.classList.add('destroyed');
+    }
+    if (blogSlider) {
+      blogSwiper.destroy();
+      blogSlider.classList.add('destroyed');
+    }
+    if (circleSlider) {
+      circleSwiper.destroy();
+      circleSlider.classList.add('destroyed');
+    }
+    if (uspSlider) {
+      uspSwiper.destroy();
+      uspSlider.classList.add('destroyed');
+    }
   } else if (width > 500) {
-    uspSwiper.destroy();
-    circleSwiper.destroy();
-    uspSlider.classList.add('destroyed');
-    circleSlider.classList.add('destroyed');
+    if (circleSlider) {
+      circleSwiper.destroy();
+      circleSlider.classList.add('destroyed');
+    }
+    if (uspSlider) {
+      uspSwiper.destroy();
+      uspSlider.classList.add('destroyed');
+    }
   } else {
-    animalSwiper.init();
-    blogSwiper.init();
-    circleSwiper.init();
-    uspSwiper.init();
-
-    animalSlider.classList.remove('destroyed');
-    blogSlider.classList.remove('destroyed');
-    circleSlider.classList.remove('destroyed');
-    uspSlider.classList.remove('destroyed');
+    if (animalSlider) {
+      animalSwiper.init();
+      animalSlider.classList.remove('destroyed');
+    }
+    if (blogSlider) {
+      blogSwiper.init();
+      blogSlider.classList.remove('destroyed');
+    }
+    if (circleSlider) {
+      circleSwiper.init();
+      circleSlider.classList.remove('destroyed');
+    }
+    if (uspSlider) {
+      uspSwiper.init();
+      uspSlider.classList.remove('destroyed');
+    }
   }
 
   // if (width > 500) {
@@ -321,23 +389,89 @@ var productSlider = new Swiper(".product-slider", {
 /* Contact */
 var contactThumbSlider = new Swiper(".contact-thumb-slider", {
   loop: false,
-  spaceBetween: 10,
+  spaceBetween: 30,
   slidesPerView: 4,
-  freeMode: true,
+  freeMode: false,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    0: {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      slidesPerView: 1.5,
+      noSwiping: false,
+      allowSlidePrev: true,
+      allowSlideNext: true,
+      centeredSlides: true
+    },
+    768: {
+      pagination: false,
+      slidesPerView: 4,
+      noSwiping: true,
+      allowSlidePrev: false,
+      allowSlideNext: false,
+      centeredSlides: false
+    }
+  }
+});
+
+contactThumbSlider.on('slideChange', function() {
+  let index_currentSlide = contactThumbSlider.realIndex;
+  let currentSlide = contactThumbSlider.slides[index_currentSlide]
+  if (index_currentSlide !== 3) {
+    contactSlider.slideTo(index_currentSlide, 500, false);
+  }
+});
+
+contactThumbSlider.on('beforeTransitionStart', function(e) {
+  var piggyModal = new bootstrap.Modal(document.getElementById('piggyModal'));
+
+  let index_currentSlide = contactThumbSlider.realIndex;
+  if (index_currentSlide === 3) {
+    // piggyModal.show();
+  }
 });
 
 var contactSlider = new Swiper(".contact-slider", {
   loop: false,
   spaceBetween: 10,
-  effect: 'fade',
+  // effect: 'fade',
+  // allowSlideNext: false,
+  // allowSlidePrev: false,
+  allowTouchMove: false,
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    prevEl: ".swiper-button-prev"
   },
   thumbs: {
-    swiper: contactThumbSlider,
-  },
+    swiper: contactThumbSlider
+  }
 });
 
+function showFields(choice) {
+  const additionalInfo = document.querySelector('.additional-information');
+  if (choice === true) {
+    additionalInfo.classList.add('active');
+  } else {
+    additionalInfo.classList.remove('active');
+  }
+}
+
+function showShipping(choice) {
+  const shippingInfo = document.querySelector('.shipping-address');
+  if (choice === true) {
+    shippingInfo.classList.add('active');
+  } else {
+    shippingInfo.classList.remove('active');
+  }
+}
+
+function showBilling(choice) {
+  const billingInfo = document.querySelector('.billing-address');
+  if (choice === true) {
+    billingInfo.classList.add('active');
+  } else {
+    billingInfo.classList.remove('active');
+  }
+}

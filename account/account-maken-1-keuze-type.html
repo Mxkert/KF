@@ -558,124 +558,80 @@
       </div>
     </nav>
 
+    <div class="page-header subpage-header mb-0">
+      <div class="container">
+        <div class="row align-items-center h-100">
+          <div class="col-lg-12">
+            <div class="content">
+              <div class="breadcrumbs">
+                <h6>
+                  <a href="#">
+                    Home
+                  </a>
+                </h6>
+                <h6>
+                  <a href="#">
+                    #
+                  </a>
+                </h6>
+              </div>
+              <h1 class="title mb-0 white-title">Account maken</h1>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+
     <div class="main">
 
       <div class="section">
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-lg-8 mx-auto">
 
-              <!-- Search container -->
-              <div class="search-container">
-                <div class="search-heading">
-                  <h4 class="title white-title">Zoeken en filteren</h4>
-                  <button type="button" class="btn-close close-filters">
-                    <img class="close-filters" src="../img/close-white.svg" />
-                  </button>
-                </div>
-                <div class="search-form">
-                  <form> 
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group mb-md-0">
-                          <input class="form-control" type="search" placeholder="Zoek op trefwoord..." aria-label="Zoeken">
-                          <button class="search-btn" type="submit">
-                            <i class="fa fa-search"></i>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <select class="form-select mb-md-0" aria-label="Zoekresultaten">
-                          <option value="alles" selected>Toon alles in zoekresultaat</option>
-                          <option value="producten">Toon alleen producten in zoekresultaat</option>
-                        </select>
-                      </div>
+              <div class="form-container">
+
+                <form id="happy_mail" method="post" action="#">
+
+                  <div class="form-group">
+                    <h5 class="title">Stap 1 van 2</h5>
+                    <p>
+                      Om een account voor je aan te kunnen maken, moeten we de volgende zaken van je weten om te voldoen aan de CAVP voorwaarden:
+                    </p>
+                    <p><strong>Zet een vink wat van toepassing is:*</strong></p>
+    
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="type" id="professional" value="professional" checked>
+                      <label class="form-check-label" for="professional">
+                        Ik ben veterinair professional en mag diergeneesmiddelen voorschrijven of afleveren
+                      </label>
                     </div>
-                  </form>
-                  <div class="mobile-filter-btn">
-                    <button type="button" class="reset-filters btn btn-link white btn-clean">
-                      Reset filter
-                    </button>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="type" id="beroepsmatig" value="beroepsmatig">
+                      <label class="form-check-label" for="beroepsmatig">
+                        Ik hou beroepsmatig dieren
+                      </label>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="mobile-filter-btn">
-                <button type="button" class="open-filters btn btn-link btn-clean">
-                  Filter
-                </button>
-              </div>
 
-              <div class="search-results">
-                <!-- Result item -->
-                <div class="result-item mb-3">
-                  <div class="result-title">
-                    <h5 class="title mb-0">Zoekwoord</h5>
-                  </div>
-                  <div class="result-desc">
+                  <div class="form-group">
                     <p>
-                      Resultaat in context en link naar pagina, zoals standaard
+                      Deze website is bedoelt voor veterinair professional die in Nederland gevestigd zijn.
                     </p>
                   </div>
-                </div>
-                <!-- Result item -->
-                <div class="result-item mb-3">
-                  <div class="result-title">
-                    <h5 class="title mb-0">Zoekwoord</h5>
-                  </div>
-                  <div class="result-desc">
-                    <p>
-                      Resultaat in context en link naar pagina, zoals standaard
-                    </p>
-                  </div>
-                </div>
-                <!-- Result item -->
-                <div class="result-item mb-3">
-                  <div class="result-title">
-                    <h5 class="title mb-0">Zoekwoord</h5>
-                  </div>
-                  <div class="result-desc">
-                    <p>
-                      Resultaat in context en link naar pagina, zoals standaard
-                    </p>
-                  </div>
-                </div>
-                <!-- Result item -->
-                <div class="result-item mb-3">
-                  <div class="result-title">
-                    <h5 class="title mb-0">Zoekwoord</h5>
-                  </div>
-                  <div class="result-desc">
-                    <p>
-                      Resultaat in context en link naar pagina, zoals standaard
-                    </p>
-                  </div>
-                </div>
-                <!-- Result item -->
-                <div class="result-item mb-3">
-                  <div class="result-title">
-                    <h5 class="title mb-0">Zoekwoord</h5>
-                  </div>
-                  <div class="result-desc">
-                    <p>
-                      Resultaat in context en link naar pagina, zoals standaard
-                    </p>
-                  </div>
-                </div>
-              </div>
 
-              <div class="search-pagination">
-                <div class="page-item">
-                  <a href="#">1</a>
-                </div>
-                <div class="page-item">
-                  <a href="#" class="active">2</a>
-                </div>
-                <div class="page-item">
-                  <a href="#">3</a>
-                </div>
-                <div class="page-item">
-                  <a href="#">4</a>
-                </div>
+                  <div class="form-buttons">
+                    <button type="submit" class="btn btn-green btn-clean">Volgende</button>
+                  </div>
+
+                  <div class="form-footer mt-5">
+                    <p class="mb-0">
+                      Ik heb al een account, ga naar de <a href="#">inloggen</a> pagina
+                    </p>
+                  </div>
+                  
+                </form>
+
               </div>
 
             </div>

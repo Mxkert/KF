@@ -25,11 +25,12 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300;400&display=swap" rel="stylesheet">
 
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=1">
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -81,54 +82,279 @@
           </div>
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
+              <a class="nav-link d-md-none" href="#">Home</a>
               <a class="nav-link has-sub-nav active" href="#">Dieren</a>
               <!-- Category navigation -->
               <div class="category-nav">
-                <div class="nav-item">
-                  <div class="nav-link parent-link">
-                    Dieren:
-                  </div>
+                <div class="mobile-action">
+                  <h6 class="text-uppercase back-btn"><i class="fa fa-arrow-left"></i> Terug naar menu</h6>
+                  <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="../img/close.svg" />
+                  </button>
                 </div>
-                <div class="nav-item">
-                  <div class="nav-link has-sub-nav">
-                    <a href="#">
-                      Rundvee
-                    </a>
+                <div class="navbar-nav">
+                  <div class="nav-item">
+                    <div class="nav-link parent-link">
+                      Dieren:
+                    </div>
                   </div>
-                </div>
-                <div class="nav-item">
-                  <div class="nav-link has-sub-nav">
-                    <a href="#">
-                      Varkens
-                    </a>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Rundvee
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Rundvee<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="nav-item">
-                  <div class="nav-link has-sub-nav">
-                    <a href="#">
-                      Pluimvee
-                    </a>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Varkens
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Varkens<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="nav-item">
-                  <div class="nav-link has-sub-nav">
-                    <a href="#">
-                      Kleine herkauwers
-                    </a>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Pluimvee
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Pluimvee<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="nav-item">
-                  <div class="nav-link has-sub-nav">
-                    <a href="#">
-                      Paarden
-                    </a>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Kleine herkauwers
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Kleine herkauwers<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="nav-item">
-                  <div class="nav-link has-sub-nav">
-                    <a href="#">
-                      Gezelschapsdieren
-                    </a>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Paarden
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Paarden<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav-item">
+                    <div class="nav-link">
+                      <a href="#" class="has-sub-category">
+                        Gezelschapsdieren
+                      </a>
+                      <div class="category-sub-nav">
+                        <div class="mobile-action">
+                          <h6 class="text-uppercase category-back-btn"><i class="fa fa-arrow-left"></i> Terug naar dieren</h6>
+                          <button class="mobile-close" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="../img/close.svg" />
+                          </button>
+                        </div>
+                        <div class="navbar-nav">
+                          <div class="nav-item">
+                            <div class="nav-link parent-link justify-content-start">
+                              <span class="category-name">Dieren / </span> Gezelschapsdieren<span class="category-dots">:</span>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Melkvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Vleesvee
+                              </a>
+                            </div>
+                          </div>
+                          <div class="nav-item">
+                            <div class="nav-link">
+                              <a href="#">
+                                Jongvee
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -254,7 +480,7 @@
             </li>
           </ul>
           <form> 
-            <input class="form-control" type="search" placeholder="Zoeken naar..." aria-label="Zoeken">
+            <input class="form-control mb-0" type="search" placeholder="Zoeken naar..." aria-label="Zoeken">
             <button class="search-btn" type="submit">
               <i class="fa fa-search"></i>
             </button>
@@ -333,6 +559,7 @@
     </nav>
 
     <div class="page-header subpage-header mb-0">
+      <img class="corner" src="../img/header-corner-white.svg" />
       <div class="container">
         <div class="row align-items-center h-100">
           <div class="col-lg-12">
@@ -365,14 +592,18 @@
 
               <!-- Search container -->
               <div class="search-container">
+                <img src="../img/top-corner-white.svg" class="corner-top">
                 <div class="search-heading">
                   <h4 class="title white-title">Filteren</h4>
+                  <button type="button" class="btn-close close-filters">
+                    <img class="close-filters" src="../img/close-white.svg" />
+                  </button>
                 </div>
                 <div class="search-form">
-                  <fo rm> 
+                  <form> 
                     <div class="row">
                       <div class="col-md-6">
-                        <div class="form-group">
+                        <div class="form-group mb-md-0">
                           <input class="form-control" type="search" placeholder="Zoek op trefwoord..." aria-label="Zoeken">
                           <button class="search-btn" type="submit">
                             <i class="fa fa-search"></i>
@@ -380,7 +611,7 @@
                         </div>
                       </div>
                       <div class="col-md-6">
-                        <select class="form-select" aria-label="Zoekresultaten">
+                        <select class="form-select mb-md-0" aria-label="Zoekresultaten">
                           <option value="alles" selected>Alle actueel</option>
                           <option value="agenda">Agenda</option>
                           <option value="artikels">Artikels</option>
@@ -391,22 +622,32 @@
                       </div>
                     </div>
                   </form>
+                  <div class="mobile-filter-btn">
+                    <button type="button" class="reset-filters btn btn-link white btn-clean">
+                      Reset filter
+                    </button>
+                  </div>
                 </div>
               </div>
+              <div class="mobile-filter-btn">
+                <button type="button" class="open-filters btn btn-link btn-clean">
+                  Filter
+                </button>
+              </div>
 
-              <div class="blog-listing mt-5">
+              <div class="blog-listing mt-3 mt-md-5">
                 <div class="row">
                   <div class="col-md-4">
                     <div class="card blog-card">
                       <img src="../img/card-corner.svg" class="corner">
                       <div class="card-image">
-                        <img src="../img/actueel-img.jpg" alt="" />
+                        <img src="../img/actueel/koe.jpg" alt="" />
                       </div>
                       <div class="card-body">
                         <div class="card-category">
                           <h6>Blog</h6>
                         </div>
-                        <h4 class="title">Wij stoppen onze neus in jouw uitdaging</h4>
+                        <h5 class="title">Wij stoppen onze neus in jouw uitdaging</h5>
                         <p>
                           En daar zijn we natuurlijk heel erg trots op! Meer tekst tot vijf regels. En daar zijn we natuurlijk heel erg trots op. Meer tekst tot max vijf regels. Afgebroken met puntjes … 
                         </p>
@@ -422,13 +663,13 @@
                     <div class="card blog-card">
                       <img src="../img/card-corner.svg" class="corner">
                       <div class="card-image">
-                        <img src="../img/actueel-img.jpg" alt="" />
+                        <img src="../img/actueel/koe.jpg" alt="" />
                       </div>
                       <div class="card-body">
                         <div class="card-category">
                           <h6>Blog</h6>
                         </div>
-                        <h4 class="title">Wij stoppen onze neus in jouw uitdaging</h4>
+                        <h5 class="title">Wij stoppen onze neus in jouw uitdaging</h5>
                         <p>
                           En daar zijn we natuurlijk heel erg trots op! Meer tekst tot vijf regels. En daar zijn we natuurlijk heel erg trots op. Meer tekst tot max vijf regels. Afgebroken met puntjes … 
                         </p>
@@ -444,13 +685,13 @@
                     <div class="card blog-card">
                       <img src="../img/card-corner.svg" class="corner">
                       <div class="card-image">
-                        <img src="../img/actueel-img.jpg" alt="" />
+                        <img src="../img/actueel/koe.jpg" alt="" />
                       </div>
                       <div class="card-body">
                         <div class="card-category">
                           <h6>Blog</h6>
                         </div>
-                        <h4 class="title">Wij stoppen onze neus in jouw uitdaging</h4>
+                        <h5 class="title">Wij stoppen onze neus in jouw uitdaging</h5>
                         <p>
                           En daar zijn we natuurlijk heel erg trots op! Meer tekst tot vijf regels. En daar zijn we natuurlijk heel erg trots op. Meer tekst tot max vijf regels. Afgebroken met puntjes … 
                         </p>
@@ -466,13 +707,13 @@
                     <div class="card blog-card">
                       <img src="../img/card-corner.svg" class="corner">
                       <div class="card-image">
-                        <img src="../img/actueel-img.jpg" alt="" />
+                        <img src="../img/actueel/koe.jpg" alt="" />
                       </div>
                       <div class="card-body">
                         <div class="card-category">
                           <h6>Blog</h6>
                         </div>
-                        <h4 class="title">Wij stoppen onze neus in jouw uitdaging</h4>
+                        <h5 class="title">Wij stoppen onze neus in jouw uitdaging</h5>
                         <p>
                           En daar zijn we natuurlijk heel erg trots op! Meer tekst tot vijf regels. En daar zijn we natuurlijk heel erg trots op. Meer tekst tot max vijf regels. Afgebroken met puntjes … 
                         </p>
@@ -488,13 +729,13 @@
                     <div class="card blog-card highlight-card">
                       <img src="../img/card-corner-white.svg" class="corner">
                       <div class="card-image">
-                        <img src="../img/actueel-img.jpg" alt="" />
+                        <img src="../img/actueel/koe.jpg" alt="" />
                       </div>
                       <div class="card-body">
                         <div class="card-category">
                           <h6>Blog</h6>
                         </div>
-                        <h4 class="title">Wij stoppen onze neus in jouw uitdaging</h4>
+                        <h5 class="title">Wij stoppen onze neus in jouw uitdaging</h5>
                         <p>
                           En daar zijn we natuurlijk heel erg trots op! Meer tekst tot vijf regels. En daar zijn we natuurlijk heel erg trots op. Meer tekst tot max vijf regels. Afgebroken met puntjes … 
                         </p>
@@ -510,13 +751,13 @@
                     <div class="card blog-card">
                       <img src="../img/card-corner.svg" class="corner">
                       <div class="card-image">
-                        <img src="../img/actueel-img.jpg" alt="" />
+                        <img src="../img/actueel/koe.jpg" alt="" />
                       </div>
                       <div class="card-body">
                         <div class="card-category">
                           <h6>Blog</h6>
                         </div>
-                        <h4 class="title">Wij stoppen onze neus in jouw uitdaging</h4>
+                        <h5 class="title">Wij stoppen onze neus in jouw uitdaging</h5>
                         <p>
                           En daar zijn we natuurlijk heel erg trots op! Meer tekst tot vijf regels. En daar zijn we natuurlijk heel erg trots op. Meer tekst tot max vijf regels. Afgebroken met puntjes … 
                         </p>
@@ -553,13 +794,94 @@
 
     </div>
 
+    <!-- Vraag 't Piggy - Fullscreen modal -->
+    <div class="modal cta-modal fade" id="piggyModal" tabindex="-1" aria-labelledby="piggyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 d-flex">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="../img/close-white.svg" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 mx-auto">
+                  <div class="modal-form">
+                    <h2 class="title text-white">Vraag het piggy!</h2>
+                    <p class="text-white">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel nisl risus. Sed lobortis eget ligula vitae ornare. Nulla eget posuere risus, eu auctor dui. Duis a vulputate ligula. Praesent nec luctus odio. 
+                    </p>
+
+                    <!-- Form -->
+                    <form action="#">
+                      <div class="row">
+                        <!-- Je vraag -->
+                        <div class="col-md-12">
+                          <div class="mb-2">
+                            <textarea class="form-control" id="vraag" name="vraag" rows="3" placeholder="Je vraag"></textarea>
+                          </div>
+                        </div>
+                        <!-- Je voornaam -->
+                        <div class="col-md-12">
+                          <div class="mb-2">
+                            <input type="text" class="form-control" id="voornaam" name="voornaam" placeholder="Je voornaam">
+                          </div>
+                        </div>
+                        <!-- Je e-mailadres -->
+                        <div class="col-md-12">
+                          <div class="mb-2">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Je e-mailadres">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <p class="text-start text-white mb-1">
+                            Als je liever terug gebeld wilt worden:
+                          </p>
+                          <!-- Je telefoonnummer -->
+                          <div class="col-md-12">
+                            <div class="mb-3">
+                              <input type="tel" class="form-control" id="telefoonnummer" name="telefoonnummer" placeholder="Je telefoonnummer">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-md-12">
+                          <div class="animated-btn">
+                            <img class="head" src="../img/animations/piggy-head.svg" />
+                            <img class="feet" src="../img/animations/piggy-feet.svg" />
+                            <button type="submit" class="btn btn-white btn-animated">
+                              <span>Verstuur</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <img src="../img/card-corner.svg" class="corner">
       <div class="container">
         <div class="animated-btn hidden">
           <img class="head" src="../img/animations/piggy-head.svg" />
           <img class="feet" src="../img/animations/piggy-feet.svg" />
-          <a href="#" class="btn btn-green btn-animated">
+          <a href="#" class="btn btn-green btn-animated" data-bs-toggle="modal" data-bs-target="#piggyModal">
             <span>Vraag 't Piggy</span>
           </a>
         </div>
@@ -568,7 +890,7 @@
           <div class="col-md-4 mb-4 mb-md-0">
             <div class="mail-container">
               <img src="../img/card-corner-white.svg" class="corner">
-              <h4 class="title white-title">Happy M@il</h4>
+              <h5 class="title white-title">Happy M@il</h5>
               <p>
                 Direct onze laatste voorraad en nieuw aanbod in je mailbox!
               </p>
@@ -578,7 +900,7 @@
             </div>
           </div>
 
-          <div class="col-md-3 mx-auto mb-4 mb-md-0">
+          <div class="col-md-4 mx-auto mb-4 mb-md-0 contact-info">
             <h6>Contact</h6>
             <p>
               Kernfarm B.V.<br>
@@ -635,16 +957,7 @@
 
               <div class="badges">
                 <div class="badge-icon">
-                  <img src="../img/badges/GMP-Logo-1.svg" />
-                </div>
-                <div class="badge-icon">
-                  <img src="../img/badges/Image 2.svg" />
-                </div>
-                <div class="badge-icon">
-                  <img src="../img/badges/Top-250-groeibedrijven-2020.svg" />
-                </div>
-                <div class="badge-icon">
-                  <img src="../img/badges/Laag 1.svg" />
+                  <img src="../img/badges.png" />
                 </div>
               </div>
             </div>
@@ -653,6 +966,7 @@
 
         </div>
       </div>
+
     </footer>
     
     <!-- Bootstrap 5 CDN -->
@@ -662,6 +976,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Custom scripts -->
-    <script src="/js/scripts.js" async defer></script>
+    <script src="/js/scripts.js?v=1" async defer></script>
   </body>
-</html> 
+</html>

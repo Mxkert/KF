@@ -558,124 +558,352 @@
       </div>
     </nav>
 
+    <div class="page-header subpage-header mb-0">
+      <div class="container">
+        <div class="row align-items-center h-100">
+          <div class="col-lg-12">
+            <div class="content">
+              <div class="breadcrumbs">
+                <h6>
+                  <a href="#">
+                    Home
+                  </a>
+                </h6>
+                <h6>
+                  <a href="#">
+                    Inschrijven
+                  </a>
+                </h6>
+              </div>
+              <h1 class="title mb-0 white-title">Account maken</h1>
+              <p>
+                Je geeft aan dat je beroepsmatig dieren houdt. Vul onderstaand formulier in om je account te maken zodat je toegang krijgt tot de hele website.
+              </p>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+
     <div class="main">
 
       <div class="section">
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-lg-8 mx-auto">
 
-              <!-- Search container -->
-              <div class="search-container">
-                <div class="search-heading">
-                  <h4 class="title white-title">Zoeken en filteren</h4>
-                  <button type="button" class="btn-close close-filters">
-                    <img class="close-filters" src="../img/close-white.svg" />
-                  </button>
-                </div>
-                <div class="search-form">
-                  <form> 
+              <div class="form-container">
+
+                <form id="happy_mail" method="post" action="#">
+
+                  <div class="form-group">
+                    <h5 class="title">Stap 2 van 2</h5>
+
                     <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group mb-md-0">
-                          <input class="form-control" type="search" placeholder="Zoek op trefwoord..." aria-label="Zoeken">
-                          <button class="search-btn" type="submit">
-                            <i class="fa fa-search"></i>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <select class="form-select mb-md-0" aria-label="Zoekresultaten">
-                          <option value="alles" selected>Toon alles in zoekresultaat</option>
-                          <option value="producten">Toon alleen producten in zoekresultaat</option>
-                        </select>
+                      <div class="col-md-12">
+                        <label for="voornaam" class="form-label">Voornaam</label>
+                        <input type="text" class="form-control" id="voornaam" placeholder="Je voornaam">
                       </div>
                     </div>
-                  </form>
-                  <div class="mobile-filter-btn">
-                    <button type="button" class="reset-filters btn btn-link white btn-clean">
-                      Reset filter
-                    </button>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="achternaam" class="form-label">Achternaam</label>
+                        <input type="text" class="form-control" id="achternaam" placeholder="Je achternaam">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="tussenvoegsel" class="form-label">Tussenvoegsel</label>
+                        <input type="text" class="form-control" id="tussenvoegsel" placeholder="Tussenvoegsel">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label for="email" class="form-label">E-mailadres</label>
+                        <input type="email" class="form-control" id="email" placeholder="Je e-mailadres">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <label for="wachtwoord" class="form-label">Wachtwoord</label>
+                        <input type="password" class="form-control" id="wachtwoord" placeholder="Wachtwoord">
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="mobile-filter-btn">
-                <button type="button" class="open-filters btn btn-link btn-clean">
-                  Filter
-                </button>
-              </div>
 
-              <div class="search-results">
-                <!-- Result item -->
-                <div class="result-item mb-3">
-                  <div class="result-title">
-                    <h5 class="title mb-0">Zoekwoord</h5>
+                  <div class="form-group">
+                    <h5 class="title">Je specialisatie</h5>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="rundvee" id="rundvee" name="specialisatie[]">
+                          <label class="form-check-label" for="rundvee">
+                            Rundvee
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="varkens" id="varkens" name="specialisatie[]">
+                          <label class="form-check-label" for="varkens">
+                            Varkens
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="pluimvee" id="pluimvee" name="specialisatie[]">
+                          <label class="form-check-label" for="pluimvee">
+                            Pluimvee
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="kleine_herkauwers" id="kleine_herkauwers" name="specialisatie[]">
+                          <label class="form-check-label" for="kleine_herkauwers">
+                            Kleine herkauwers
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="paarden" id="paarden" name="specialisatie[]">
+                          <label class="form-check-label" for="paarden">
+                            Paarden
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="gezelschapsdieren" id="gezelschapsdieren" name="specialisatie[]">
+                          <label class="form-check-label" for="gezelschapsdieren">
+                            Gezelschapsdieren
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="andere" id="andere" name="specialisatie[]">
+                          <label class="form-check-label" for="andere">
+                            Andere
+                          </label>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="result-desc">
-                    <p>
-                      Resultaat in context en link naar pagina, zoals standaard
-                    </p>
-                  </div>
-                </div>
-                <!-- Result item -->
-                <div class="result-item mb-3">
-                  <div class="result-title">
-                    <h5 class="title mb-0">Zoekwoord</h5>
-                  </div>
-                  <div class="result-desc">
-                    <p>
-                      Resultaat in context en link naar pagina, zoals standaard
-                    </p>
-                  </div>
-                </div>
-                <!-- Result item -->
-                <div class="result-item mb-3">
-                  <div class="result-title">
-                    <h5 class="title mb-0">Zoekwoord</h5>
-                  </div>
-                  <div class="result-desc">
-                    <p>
-                      Resultaat in context en link naar pagina, zoals standaard
-                    </p>
-                  </div>
-                </div>
-                <!-- Result item -->
-                <div class="result-item mb-3">
-                  <div class="result-title">
-                    <h5 class="title mb-0">Zoekwoord</h5>
-                  </div>
-                  <div class="result-desc">
-                    <p>
-                      Resultaat in context en link naar pagina, zoals standaard
-                    </p>
-                  </div>
-                </div>
-                <!-- Result item -->
-                <div class="result-item mb-3">
-                  <div class="result-title">
-                    <h5 class="title mb-0">Zoekwoord</h5>
-                  </div>
-                  <div class="result-desc">
-                    <p>
-                      Resultaat in context en link naar pagina, zoals standaard
-                    </p>
-                  </div>
-                </div>
-              </div>
 
-              <div class="search-pagination">
-                <div class="page-item">
-                  <a href="#">1</a>
-                </div>
-                <div class="page-item">
-                  <a href="#" class="active">2</a>
-                </div>
-                <div class="page-item">
-                  <a href="#">3</a>
-                </div>
-                <div class="page-item">
-                  <a href="#">4</a>
-                </div>
+                  <div class="form-group">
+                    <h5 class="title">Bestellen via de website?*</h5>
+                    <div class="row">
+                      <div class="col-md-1 me-4">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="bestellen" id="bestellen_ja" value="ja" onChange="showFields(true)">
+                          <label class="form-check-label" for="bestellen_ja">
+                            Ja
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-1">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="bestellen" id="bestellen_nee" value="nee" onChange="showFields(false)">
+                          <label class="form-check-label" for="bestellen_nee">
+                            Nee
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="additional-information">
+                    <div class="form-group">
+                      <h5>Praktijkgegevens</h5>
+
+                      <div class="row">
+                        <div class="col-md-12">
+                          <label for="praktijk_voornaam" class="form-label">Praktijknaam</label>
+                          <input type="text" class="form-control" id="praktijk_voornaam" placeholder="Praktijknaam">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="praktijk_straatnaam" class="form-label">Straatnaam</label>
+                          <input type="text" class="form-control" id="praktijk_straatnaam" placeholder="Straatnaam">
+                        </div>
+                        <div class="col-md-3">
+                          <label for="praktijk_huisnummer" class="form-label">Huisnummer</label>
+                          <input type="text" class="form-control" id="praktijk_huisnummer" placeholder="Huisnummer">
+                        </div>
+                        <div class="col-md-3">
+                          <label for="praktijk_toevoeging" class="form-label">Toevoeging</label>
+                          <input type="text" class="form-control" id="praktijk_toevoeging" placeholder="Toevoeging">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="praktijk_postcode" class="form-label">Postcode</label>
+                          <input type="text" class="form-control" id="praktijk_postcode" placeholder="Postcode">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="praktijk_plaatsnaam" class="form-label">Plaatsnaam</label>
+                          <input type="text" class="form-control" id="praktijk_plaatsnaam" placeholder="Plaatsnaam">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <label for="praktijk_email" class="form-label">E-mailadres</label>
+                          <input type="email" class="form-control" id="praktijk_email" placeholder="Je e-mailadres">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="reg_nr" class="form-label">Diergeneeskundig register nummer</label>
+                          <input type="text" class="form-control" id="reg_nr" placeholder="Diergeneeskundig register nummer">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="kvk" class="form-label">KvK nummer</label>
+                          <input type="text" class="form-control" id="kvk" placeholder="KvK nummer">
+                        </div>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-md-12">
+                          <p>
+                            Om te kunnen bestellen via de website zullen bovenstaande gegevens door ons geverifieerd worden.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <h5>Afwijkend factuuradres?</h5>
+                      <div class="row">
+                        <div class="col-md-1 me-4">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="factuur" id="factuur_ja" value="ja" onChange="showShipping(true)">
+                            <label class="form-check-label" for="factuur_ja">
+                              Ja
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-md-1">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="factuur" id="factuur_nee" value="nee" onChange="showShipping(false)" checked>
+                            <label class="form-check-label" for="factuur_nee">
+                              Nee
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="shipping-address">
+                      <div class="form-group">
+
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label for="shipping_straatnaam" class="form-label">Straatnaam</label>
+                            <input type="text" class="form-control" id="shipping_straatnaam" placeholder="Straatnaam">
+                          </div>
+                          <div class="col-md-3">
+                            <label for="shipping_huisnummer" class="form-label">Huisnummer</label>
+                            <input type="text" class="form-control" id="shipping_huisnummer" placeholder="Huisnummer">
+                          </div>
+                          <div class="col-md-3">
+                            <label for="shipping_toevoeging" class="form-label">Toevoeging</label>
+                            <input type="text" class="form-control" id="shipping_toevoeging" placeholder="Toevoeging">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label for="shipping_postcode" class="form-label">Postcode</label>
+                            <input type="text" class="form-control" id="shipping_postcode" placeholder="Postcode">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="shipping_plaatsnaam" class="form-label">Plaatsnaam</label>
+                            <input type="text" class="form-control" id="shipping_plaatsnaam" placeholder="Plaatsnaam">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label for="shipping_email" class="form-label">E-mailadres</label>
+                            <input type="email" class="form-control" id="shipping_email" placeholder="Je e-mailadres">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <h5>Afwijkend bezorgadres?</h5>
+                      <div class="row">
+                        <div class="col-md-1 me-4">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="bezorg" id="bezorg_ja" value="ja" onChange="showBilling(true)">
+                            <label class="form-check-label" for="bezorg_ja">
+                              Ja
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-md-1">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="bezorg" id="bezorg_nee" value="nee" onChange="showBilling(false)" checked>
+                            <label class="form-check-label" for="bezorg_nee">
+                              Nee
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="billing-address">
+                      <div class="form-group">
+
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label for="billing_straatnaam" class="form-label">Straatnaam</label>
+                            <input type="text" class="form-control" id="billing_straatnaam" placeholder="Straatnaam">
+                          </div>
+                          <div class="col-md-3">
+                            <label for="billing_huisnummer" class="form-label">Huisnummer</label>
+                            <input type="text" class="form-control" id="billing_huisnummer" placeholder="Huisnummer">
+                          </div>
+                          <div class="col-md-3">
+                            <label for="billing_toevoeging" class="form-label">Toevoeging</label>
+                            <input type="text" class="form-control" id="billing_toevoeging" placeholder="Toevoeging">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label for="billing_postcode" class="form-label">Postcode</label>
+                            <input type="text" class="form-control" id="billing_postcode" placeholder="Postcode">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="billing_plaatsnaam" class="form-label">Plaatsnaam</label>
+                            <input type="text" class="form-control" id="billing_plaatsnaam" placeholder="Plaatsnaam">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="form-group">
+                    <h5 class="title">Registreren</h5>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="ja" id="happy_mail" name="happy_mail">
+                          <label class="form-check-label" for="happy_mail">
+                            Ja, ik ontvang graag de Happy mails 
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="ja" id="voorwaarden" name="voorwaarden">
+                          <label class="form-check-label" for="voorwaarden">
+                            Ja, ik ben akkoord met de <a href="#">privacy voorwaarden</a> en heb deze gelezen*
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-buttons">
+                    <button type="submit" class="btn btn-green btn-clean">Registreren</button>
+                  </div>
+
+                  <div class="form-footer mt-5">
+                    <p class="mb-0">
+                      * Verplichte velden
+                    </p>
+                  </div>
+                  
+                </form>
+
               </div>
 
             </div>
