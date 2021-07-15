@@ -1,122 +1,136 @@
-// Open sub navigation
-document.addEventListener('click', function (event) {
+var subNavTogglers = document.querySelectorAll('.has-sub-nav');
 
-	// If the clicked element does not have the .has-sub-nav class, ignore it
-	if (!event.target.matches('.has-sub-nav')) return;
+subNavTogglers.forEach(toggler => {
+  toggler.onclick = function(event) {
 
-  if (window.innerWidth > 500) {
-    // Get the sub-nav element corresponding to the clicked navigation item
-    const parent = event.target.parentNode;
-    const subNav = parent.querySelector('.sub-nav');
-  
-    if (subNav.classList.contains('shown')) {
-      // Corresponding sub-nav element is already active
-      subNav.classList.remove('shown')
-    } else {
-      // Remove the 'shown' class from all sub-nav elements
-      const subNavs = document.querySelectorAll('.sub-nav')
-      subNavs.forEach(element => element.classList.remove('shown'))
+    if (window.innerWidth > 500) {
+      // Get the sub-nav element corresponding to the clicked navigation item
+      const parent = this.parentNode;
+      const subNav = parent.querySelector('.sub-nav');
+
+      const el = document.querySelector('.navbar form')
+      el.classList.remove('active');
     
+      if (subNav.classList.contains('shown')) {
+        // Corresponding sub-nav element is already active
+        subNav.classList.remove('shown')
+      } else {
+        // Remove the 'shown' class from all sub-nav elements
+        const subNavs = document.querySelectorAll('.sub-nav')
+        subNavs.forEach(element => element.classList.remove('shown'))
+      
+        // Add the 'shown' class to the sub-nav element
+        subNav.classList.add('shown')
+      }
+    } else {
+      // Get the sub-nav element corresponding to the clicked navigation item
+      const parent = this.parentNode;
+      const subNav = parent.querySelector('.category-nav');
+  
       // Add the 'shown' class to the sub-nav element
-      subNav.classList.add('shown')
+      subNav.classList.add('active')
     }
-  } else {
-    // Get the sub-nav element corresponding to the clicked navigation item
-    const parent = event.target.parentNode;
-    const subNav = parent.querySelector('.category-nav');
 
-    // Add the 'shown' class to the sub-nav element
-    subNav.classList.add('active')
   }
-
 });
 
-// Open sub category
-document.addEventListener('click', function (event) {
+// document.querySelector('.mobile-buttons .user-toggle').onclick = function() {
+//   console.log('iuser');
+//   const subNav = document.querySelector('.account .logged-out .sub-nav')
+//   console.log(subNav);
+//   subNav.classList.add('shown');
+// }
 
-	// If the clicked element does not have the .has-sub-nav class, ignore it
-	if (!event.target.matches('.has-sub-category')) return;
-
-  if (window.innerWidth < 500) {
-    // Get the sub-nav element corresponding to the clicked navigation item
-    const parent = event.target.parentNode;
-    const subNav = parent.querySelector('.category-sub-nav');
-
-    // Add the 'shown' class to the sub-nav element
-    subNav.classList.add('active');
-  }
-
-});
-
-// Close sub navigation
-document.addEventListener('click', function (event) {
-
-	// If the clicked element does not have the .bodyClick class, ignore it
-	if (!event.target.matches('.bodyClick')) return;
+document.querySelector('.search-toggle').onclick = function() {
 
   // Remove the 'shown' class from all sub-nav elements
   const subNavs = document.querySelectorAll('.sub-nav')
   subNavs.forEach(element => element.classList.remove('shown'))
 
+  const el = document.querySelector('.navbar form')
+  el.classList.toggle('active');
+}
+
+// Open sub category
+var buttons = document.querySelectorAll('.has-sub-category');
+
+buttons.forEach(btn => {
+  btn.onclick = function(event) {
+
+    if (window.innerWidth < 500) {
+      // Get the sub-nav element corresponding to the clicked navigation item
+      const parent = this.parentNode;
+      const subNav = parent.querySelector('.category-sub-nav');
+  
+      // Add the 'shown' class to the sub-nav element
+      subNav.classList.add('active');
+    }
+
+  }
 });
 
-// Back in sub category
-document.addEventListener('click', function (event) {
+// Close sub navigation
+var bodyClicks = document.querySelectorAll('.bodyClick');
 
-	// If the clicked element does not have the .bodyClick class, ignore it
-	if (!event.target.matches('.category-back-btn')) return;
+bodyClicks.forEach(click => {
+  click.onclick = function(event) {
 
-  console.log(event.target);
+    // Remove the 'shown' class from all sub-nav elements
+    const subNavs = document.querySelectorAll('.sub-nav')
+    subNavs.forEach(element => element.classList.remove('shown'))
 
-  // Get the sub-nav element corresponding to the clicked navigation item
-  const parent = event.target.parentNode;
-  const subNav = parent.parentNode;
+  }
+});
 
-  // Remove the 'shown' class from all sub-nav elements
-  subNav.classList.remove('active');
+var backBtns = document.querySelectorAll('.category-back-btn');
 
+backBtns.forEach(btn => {
+  btn.onclick = function(event) {
+
+    // Get the sub-nav element corresponding to the clicked navigation item
+    const parent = this.parentNode;
+    const subNav = parent.parentNode;
+  
+    // Remove the 'shown' class from all sub-nav elements
+    subNav.classList.remove('active');
+
+  }
 });
 
 // Back in sub navigation
-document.addEventListener('click', function (event) {
+var backBtns = document.querySelectorAll('.back-btn');
 
-	// If the clicked element does not have the .bodyClick class, ignore it
-	if (!event.target.matches('.back-btn')) return;
+backBtns.forEach(btn => {
+  btn.onclick = function(event) {
 
-  // Remove the 'shown' class from all sub-nav elements
-  document.querySelector('.category-nav').classList.remove('active');
+    // Remove the 'shown' class from all sub-nav elements
+    document.querySelector('.category-nav').classList.remove('active');
 
+  }
 });
 
 // Open filters
-document.addEventListener('click', function (event) {
+var backBtns = document.querySelectorAll('.open-filters');
 
-	// If the clicked element does not have the .bodyClick class, ignore it
-	if (!event.target.matches('.open-filters')) return;
+backBtns.forEach(btn => {
+  btn.onclick = function(event) {
 
-  // Remove the 'shown' class from all sub-nav elements
-  document.querySelector('.search-container').classList.add('active');
+    // Remove the 'shown' class from all sub-nav elements
+    document.querySelector('.search-container').classList.add('active');
 
+  }
 });
 
 // Close filters
-document.addEventListener('click', function (event) {
+var backBtns = document.querySelectorAll('.close-filters');
 
-	// If the clicked element does not have the .bodyClick class, ignore it
-	if (!event.target.matches('.close-filters')) return;
-  console.log('close filters');
+backBtns.forEach(btn => {
+  btn.onclick = function(event) {
 
-  // Remove the 'shown' class from all sub-nav elements
-  document.querySelector('.search-container').classList.remove('active');
+    // Remove the 'shown' class from all sub-nav elements
+    document.querySelector('.search-container').classList.remove('active');
 
-});
-
-// Reset filters
-document.addEventListener('click', function (event) {
-
-	// If the clicked element does not have the .bodyClick class, ignore it
-	if (!event.target.matches('.reset-filters')) return;
-
+  }
 });
 
 // Open letter box
@@ -306,34 +320,6 @@ function setSlider(width) {
       uspSlider.classList.remove('destroyed');
     }
   }
-
-  // if (width > 500) {
-    
-  //   blogSwiper.destroy();
-  //   circleSwiper.destroy();
-  //   uspSlider.destroy();
-
-  //   blogSlider.classList.add('destroyed');
-  //   circleSlider.classList.add('destroyed');
-  //   uspSlider.classList.add('destroyed');
-
-  // } else if (width > 991) {
-
-  //   animalSwiper.destroy();
-  //   animalSlider.classList.remove('destroyed');
-
-  // } else {
-
-  //   animalSwiper.init();
-  //   blogSwiper.init();
-  //   circleSwiper.init();
-  //   uspSlider.init();
-
-  //   animalSlider.classList.remove('destroyed');
-  //   blogSlider.classList.remove('destroyed');
-  //   circleSlider.classList.remove('destroyed');
-  //   uspSlider.classList.remove('destroyed');
-  // }
 }
 
 // Listen to all click events on the document

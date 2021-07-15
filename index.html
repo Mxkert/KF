@@ -488,12 +488,16 @@
           <div class="account">
 
             <!-- Wanneer niet ingelogd -->
-            <div class="logged-out">
-              <a class="nav-link has-sub-nav" href="#">
+            <div class="logged-out d-flex">
+              <a class="nav-link search-toggle d-none d-md-block d-lg-none" href="#">
+                <div>
+                  <img src="../img/search.svg" />
+                </div>
+              </a>
+              <a class="nav-link has-sub-nav mobile-nav ms-0" href="#">
                 <span class="desktop-shown">Inloggen / registreren</span>
                 <span class="mobile-shown">
-                  <div class="mobile-buttons">
-                    <img src="../img/search.svg" />
+                  <div class="user-toggle">
                     <img src="../img/user.svg" />
                   </div>
                 </span>

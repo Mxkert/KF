@@ -534,6 +534,7 @@ h6 {
 .navbar {
   padding: 1rem 0;
   position: relative;
+  border-bottom: 1px solid #eee;
 }
 
 .navbar .navbar-brand img {
@@ -542,7 +543,7 @@ h6 {
 
 .navbar .nav-link {
   color: var(--blue);
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Inter', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
@@ -558,6 +559,12 @@ h6 {
 @media (max-width: 1400px) {
   .navbar .nav-link {
     margin-left: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar .nav-link {
+    font-size: 14px;
   }
 }
 
@@ -598,7 +605,7 @@ h6 {
   color: var(--darker-gray);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 991px) {
   .search-btn {
     top: 0;
   }
@@ -658,6 +665,15 @@ h6 {
   }
   .navbar form {
     display: none;
+  }
+  .navbar form.active {
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    background: #fff;
+    z-index: 5;
+    width: 100%;
   }
   .account .desktop-shown {
     display: none;
@@ -779,7 +795,8 @@ h6 {
   transition: opacity 0.2s ease-in-out;
 }
 
-.sub-nav.shown {
+.sub-nav.shown,
+.sub-nav.active {
   bottom: 0;
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-in-out;
@@ -787,7 +804,8 @@ h6 {
   transition: opacity 0.2s ease-in-out;
 }
 
-.sub-nav.shown .bodyClick {
+.sub-nav.shown .bodyClick,
+.sub-nav.active .bodyClick {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2370,6 +2388,7 @@ footer .badges .badge-icon img {
   .search-container.active {
     display: block;
     z-index: 1;
+    border-radius: 0;
   }
   .search-container .search-heading {
     display: -webkit-box;

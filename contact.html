@@ -488,8 +488,20 @@
           <div class="account">
 
             <!-- Wanneer niet ingelogd -->
-            <div class="logged-out">
-              <a class="nav-link has-sub-nav" href="#">Inloggen / registreren</a>
+            <div class="logged-out d-flex">
+              <a class="nav-link search-toggle d-none d-md-block d-lg-none" href="#">
+                <div>
+                  <img src="../img/search.svg" />
+                </div>
+              </a>
+              <a class="nav-link has-sub-nav mobile-nav ms-0" href="#">
+                <span class="desktop-shown">Inloggen / registreren</span>
+                <span class="mobile-shown">
+                  <div class="user-toggle">
+                    <img src="../img/user.svg" />
+                  </div>
+                </span>
+              </a>
               <!-- Sub navigation -->
               <div class="sub-nav">
                 <div class="bodyClick"></div>
@@ -547,12 +559,60 @@
             <!-- Wanneer wel ingelogd -->
             <div class="logged-in">
               <a class="nav-link has-sub-nav" href="#">Account</a>
+              <!-- Sub navigation -->
+              <div class="sub-nav">
+                <div class="bodyClick"></div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h3 class="title">
+                        Je persoonlijke omgeving
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="row">
+        
+                    <div class="col-md-2">
+                      <div class="nav-item">
+                        <div class="nav-link parent-link">
+                          Dashboard
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Bestellingen
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Facturen
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Mijn gegevens
+                          </a>
+                        </div>
+                      </div>
+                      <div class="nav-item">
+                        <div class="nav-link">
+                          <a href="#">
+                            Uitloggen
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+        
+                  </div>
+                </div>
+              </div>
             </div>
 
-          </div>
-          <div class="mobile-buttons">
-            <img src="../img/search.svg" />
-            <img src="../img/user.svg" />
           </div>
         </div>
       </div>
